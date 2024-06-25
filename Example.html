@@ -1,0 +1,243 @@
+<!Doctype_html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Algebra Website 
+		</title>
+<style>
+.desc {
+	padding=5px
+}
+</style>
+
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;} 
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+</style>
+	</head>
+<body bgcolor=#B1EBEF>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #e6ffee;
+}
+
+.topnav a {
+  float: left;
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <a class="active" href="Index.html">Home</a>
+  <a href="Quadratics.html">Quadratics</a>
+  <a href="Exponents.html">Exponents</a>  
+  <a href="Pythagorean Theorem.html">Pythagorean Theorem</a>
+  <a href="Practice.html">Practice</a>
+  <a href="Citations.html">Citations</a>
+</div>
+<br>
+<center>
+	<table bordercolor=black border=5 cellpadding=10 width=400 bgcolor=#ccffff>
+		<tr>
+			
+			<td><center><h1>Algebra</h1>
+			<h3>Equations and More</h3><center></td>
+	
+		</tr>
+	</table>
+</center>
+<br>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="Images/Algebra3.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="Images/Algebra2.avif" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="Images/Algebra.jpg" style="width:100%">
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+<br>
+<hr>
+<style>
+div {
+  background-color:#B1EBEF ;
+  padding-top: 1px;
+  padding-right: 1px;
+  padding-bottom: 1px;
+  padding-left: 1px;
+}
+</style>
+<center>
+<div class="desc">
+<h2>About this Website</h2>
+<p style="font-family:georgia"> Welcome to the algebra website! This website contains everything you need to know to ace your tests, re-learn/practice your math skills, or to learn ahead. Regardless of your intentions, I hope this website provides you with the information you need. Simply choose a topic to learn about it and its various methods of solving. Find the right method that makes math easier and more fun for you! We hope to educate students all over the world on the ways of math! While many people may have a disliking for it, math is applied many times in real life and can be very useful. If you learn math now, you may thank yourself later in life when the knowledge comes in handy. This website also provides practice and worksheets for you to fill out. Enjoy the website and learn something!</p>
+</div>
+<hr>
+<p>Best viewed in Chrome</p>
+<a href=https://jls.pausd.org/>
+<br>
+Jane Lathrop Stanford Middle School</a>
+<br>
+Created by Ellie Cardozo
+<br>
+Last updated: March 15, 2024
+<br>
+<a href=mailto:mwillis@pausd.org>  Class Webmaster </a>
+</center>
+</body>
+</html>
